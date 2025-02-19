@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: teal;
+    color: white;
+    text-align: center;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+}
+
+header h2 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Page-Specific Background Colors */
+.upcoming {
+    background-color: teal;
+}
+
+.cancelled {
+    background-color: darkred;
+}
+
+.completed {
+    background-color: darkgreen;
+}
+
+/* Table Styling */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+/* Table Header Colors */
+.upcoming th {
+    background: dodgerblue;
+}
+
+.cancelled th {
+    background: red;
+}
+
+.completed th {
+    background: green;
+}
+
+
+
+td {
+    background: lightgray;
+}
+
+/* Back Button Styling */
+.back-btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Button Colors */
+.upcoming .back-btn {
+    background: dodgerblue;
+}
+
+.cancelled .back-btn {
+    background: red;
+}
+
+.completed .back-btn {
+    background: green;
+}
+
+/* Hover Effects */
+.upcoming .back-btn:hover {
+    background: cobalt;
+}
+
+.cancelled .back-btn:hover {
+    background: darkred;
+}
+
+.completed .back-btn:hover {
+    background: darkgreen;
+}

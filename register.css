@@ -1,0 +1,66 @@
+body {
+    background-color: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.register-container {
+    width: 400px;
+    background-color: Gray94;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: black;
+}
+
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+.register-btn {
+    background-color: DodgerBlue;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.register-btn:hover {
+    background-color: Cobalt;
+}
+
+.reset-btn {
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#error-message {
+    color: red;
+    margin-bottom: 10px;
+}
+
+p{
+    color: white;
+}
