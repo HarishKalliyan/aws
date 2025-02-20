@@ -35,7 +35,7 @@ nav ul li a {
 
 
 /* Page-Specific Background Colors */
-.upcoming {
+/* .upcoming {
     background-color: teal;
 }
 
@@ -45,7 +45,7 @@ nav ul li a {
 
 .completed {
     background-color: darkgreen;
-}
+} */
 
 /* Table Styling */
 table {
@@ -54,34 +54,47 @@ table {
     border-collapse: collapse;
     background: white;
     color: black;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
 }
 
-th, td {
+td {
     padding: 10px;
-    border: 1px solid black;
+    border: none;
     text-align: center;
 }
 
+td ,th{
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1.5px solid #ddd;
+}
+
+th{
+    color: white;
+    font-size: bold;
+    border: none;
+    font-weight: bolder;
+    font-size: larger;
+}
 /* Table Header Colors */
 .upcoming th {
-    background: dodgerblue;
+    background: #007bff;
 }
 
 .cancelled th {
-    background: red;
+    background: rgb(222, 73, 73);
 }
 
 .completed th {
-    background: green;
+    background: rgb(82, 233, 82);
 }
 
 
 
-td {
-    background: lightgray;
-}
+
 
 /* Back Button Styling */
 .back-btn {
@@ -120,3 +133,22 @@ td {
 .completed .back-btn:hover {
     background: darkgreen;
 }
+
+
+#backButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: crimson;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#backButton:hover {
+    background-color: darkred;
+}
+

@@ -46,4 +46,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         window.location.reload();
     });
+
+    document.getElementById("backButton").addEventListener("click", function() {
+        window.history.back();
+    });
 });

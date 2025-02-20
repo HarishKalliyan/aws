@@ -11,6 +11,7 @@ document.getElementById("login-form").addEventListener("submit", function(event)
 
     if (user) {
         localStorage.setItem("loggedInUser", JSON.stringify(user));
+        alert("You have Logged in successfully.");
         window.location.href = "home.html";
     } else {
         errorDiv.textContent = "Both ID/Password not valid.";

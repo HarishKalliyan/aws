@@ -50,12 +50,30 @@ document.getElementById("register-form").addEventListener("submit", function(eve
     users.push(userData);
     localStorage.setItem("users", JSON.stringify(users));
 
-    alert(`Passenger Registration is successful. Your ID: ${passengerId} and Password: ${password}`);
-    window.location.href = "login.html";
+    openNotification(`Passenger Registration is successful. Your ID: ${passengerId} and Password: ${password}`);
+    
 });
 
-document.getElementById("reset").addEventListener("click", function() {
-    if (confirm("Is it okay to reset the fields?")) {
-        document.getElementById("register-form").reset();
-    }
+function openNotification(message){
+    document.getElementById("alert-message").style.display = "block";
+    document.getElementById("update-notification").innerText = message;
+}
+
+function closeNotification(){
+    document.getElementById("alert-message").style.display = "none";
+    window.location.href = "login.html";
+}
+
+function cancelReset(){
+    document.getElementById("reset-message").style.display = "none";
+}
+
+function applyReset(){
+    location.reload();
+}
+
+document.getElementById("reset").addEventListener("click", function(event) {
+    event.preventDefault();
+    document.getElementById("reset-message").style.display = "block";
+    
 });
