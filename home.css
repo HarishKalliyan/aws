@@ -68,6 +68,8 @@ button {
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
+    font-weight: bold;
+    width: 100px;
     cursor: pointer;
     margin-top: 10px;
 }
@@ -106,3 +108,7 @@ button:hover {
     margin-top: 10px;
 }
 
+
+#error-message button:hover, #success-message button:hover{
+    background: rgb(130, 140, 140);
+}

@@ -23,6 +23,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Save changes
     document.getElementById("saveProfile").addEventListener("click", function() {
+        if (document.getElementById("firstName").value === "" || document.getElementById("lastName").value === "" || document.getElementById("dob").value === "" || document.getElementById("email").value === "" || document.getElementById("address").value === "" || document.getElementById("contact").value === "") {
+            openNotification("Please fill all the fields.");
+            return;
+        }
+
         let updatedUser = {
             passengerId: loggedInUser.passengerId,
             firstName: document.getElementById("firstName").value,
@@ -41,13 +46,37 @@ document.addEventListener("DOMContentLoaded", function() {
             users[userIndex] = updatedUser;
             localStorage.setItem("users", JSON.stringify(users));
             localStorage.setItem("loggedInUser", JSON.stringify(updatedUser));
-            alert("Profile updated successfully!");
+            successNotification("Profile updated successfully!");
         }
 
-        window.location.reload();
+        
     });
 
     document.getElementById("backButton").addEventListener("click", function() {
         window.history.back();
     });
 });
+
+
+
+function successNotification(message){
+    document.getElementById("success-message").style.display = "block";
+    document.getElementById("display-success").innerText = message;
+}
+
+function closeSuccessNotification(){
+    document.getElementById("success-message").style.display = "none";
+    window.location.reload();
+}
+
+function openNotification(message){
+    document.getElementById("error-message").style.display = "block";
+    document.getElementById("display-error").innerText = message;
+}
+
+
+function closeNotification(event){
+    document.getElementById("error-message").style.display = "none";
+    event.preventDefault();
+    window.location.reload();
+}

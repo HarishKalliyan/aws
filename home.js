@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!loggedInUser) {
         window.location.href = "login.html";
     } else {
-        document.getElementById("welcomeMsg").textContent = `Welcome, ${loggedInUser.firstName}!!!`;
+        document.getElementById("welcomeMsg").textContent = `Welcome, ${loggedInUser.firstName} !!!`;
     }
 
     let today = new Date().toISOString().split("T")[0];
@@ -25,6 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
         let travelClass = document.getElementById("class").value;
         if(origin == destination){
             openNotification("Origin and Destination cannot be same.");
+        }
+        else if(travelers <= 0){
+            openNotification("Number of travelers cannot be less than 1.");
+        }else if(origin == "" || destination == "" || departureDate == "" || travelers == "" || travelClass == ""){
+            openNotification("Please fill all the fields.");
         }
         else{
         console.log(`Searching flights from ${origin} to ${destination} on ${departureDate} for ${travelers} travelers in ${travelClass} class.`);

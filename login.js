@@ -12,10 +12,15 @@ document.getElementById("login-form").addEventListener("submit", function(event)
     
     if (!user) {
         let userExists = users.some(user => user.passengerId == userId);
-        if (!userExists) {
-            openNotification("User ID not valid.");
-        } else {
+        let passwordExists = users.some(user => user.password == password);
+        if (!userExists && !passwordExists) {
+            openNotification("Both User ID and Password not valid.");
+            
+        } else if(!passwordExists){
             openNotification("Password not valid.");
+        }
+        else{
+            openNotification("User ID not valid.");
         }
     } else {
         localStorage.setItem("loggedInUser", JSON.stringify(user));
