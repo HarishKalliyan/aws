@@ -9,12 +9,38 @@ document.getElementById("login-form").addEventListener("submit", function(event)
 
     let user = users.find(user => user.passengerId == userId && user.password === password);
 
-    if (user) {
-        localStorage.setItem("loggedInUser", JSON.stringify(user));
-        alert("You have Logged in successfully.");
-        window.location.href = "home.html";
+    
+    if (!user) {
+        let userExists = users.some(user => user.passengerId == userId);
+        if (!userExists) {
+            openNotification("User ID not valid.");
+        } else {
+            openNotification("Password not valid.");
+        }
     } else {
-        errorDiv.textContent = "Both ID/Password not valid.";
-        errorDiv.style.color = "red";
+        localStorage.setItem("loggedInUser", JSON.stringify(user));
+        successNotification("You have Logged in successfully.");
+        
     }
 });
+
+function successNotification(message){
+    document.getElementById("success-message").style.display = "block";
+    document.getElementById("display-success").innerText = message;
+}
+
+function closeSuccessNotification(){
+    document.getElementById("success-message").style.display = "none";
+    window.location.href = "home.html";
+}
+
+function openNotification(message){
+    document.getElementById("error-message").style.display = "block";
+    document.getElementById("display-error").innerText = message;
+}
+
+
+function closeNotification(){
+    document.getElementById("error-message").style.display = "none";
+    window.location.href = "login.html";
+}

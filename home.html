@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Airline Management System</title>
     <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -22,6 +25,14 @@
     </header>
 
     <main>
+        <div id="success-message">
+            <p id="display-success"></p>
+            <button onclick="closeSuccessNotification()" id="close">Close</button>
+        </div>
+        <div id="error-message">
+            <p id="display-error"></p>
+            <button onclick="closeNotification()" id="close">Close</button>
+        </div>
         <h1>Airline Management System</h1>
 
         <section id="search-section">

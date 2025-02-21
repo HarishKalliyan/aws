@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Inter", serif;
     background-color: teal;
     color: white;
     text-align: center;
@@ -64,6 +64,7 @@ td {
     padding: 10px;
     border: none;
     text-align: center;
+    background: rgb(243, 243, 243);
 }
 
 td ,th{
@@ -74,7 +75,6 @@ td ,th{
 
 th{
     color: white;
-    font-size: bold;
     border: none;
     font-weight: bolder;
     font-size: larger;
@@ -89,15 +89,11 @@ th{
 }
 
 .completed th {
-    background: rgb(82, 233, 82);
+    background: rgba(82, 233, 82,0.904);
 }
 
-
-
-
-
 /* Back Button Styling */
-.back-btn {
+/* .back-btn {
     display: block;
     width: 200px;
     margin: 20px auto;
@@ -106,10 +102,10 @@ th{
     text-decoration: none;
     color: white;
     border-radius: 5px;
-}
+} */
 
 /* Button Colors */
-.upcoming .back-btn {
+/* .upcoming .back-btn {
     background: dodgerblue;
 }
 
@@ -119,10 +115,10 @@ th{
 
 .completed .back-btn {
     background: green;
-}
+} */
 
 /* Hover Effects */
-.upcoming .back-btn:hover {
+/* .upcoming .back-btn:hover {
     background: cobalt;
 }
 
@@ -132,7 +128,7 @@ th{
 
 .completed .back-btn:hover {
     background: darkgreen;
-}
+} */
 
 
 #backButton {

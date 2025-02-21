@@ -5,6 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: "Inter", serif;
 }
 
 .login-container {
@@ -24,6 +25,11 @@ input, button {
     margin: 10px 0;
 }
 
+input {
+    border-radius: 3px;
+    border: none;
+}
+
 button {
     background-color: dodgerblue;
     color: white;
@@ -33,10 +39,42 @@ button {
 }
 
 button:hover {
-    background-color: black;
+    background-color: #0047AB;
 }
 
+p,a{
+    font-weight: bolder;
+}
 
 a:hover{
     color: rgb(240, 69, 60);
+}
+
+#error-message, #success-message{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: whitesmoke ;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
+#error-message p, #success-message p{
+    color: black;
+}
+
+#error-message button, #success-message button{
+    background: teal;
+    color: aliceblue;
+    padding: 8px 16px;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
 }

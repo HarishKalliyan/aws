@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("welcomeMsg").textContent = `Welcome, ${loggedInUser.firstName}!!!`;
     }
 
+    let today = new Date().toISOString().split("T")[0];
+    document.getElementById("departureDate").setAttribute("min", today);
     // Logout functionality
     document.getElementById("logout").addEventListener("click", function () {
         localStorage.removeItem("loggedInUser");
@@ -21,8 +23,36 @@ document.addEventListener("DOMContentLoaded", function () {
         let departureDate = document.getElementById("departureDate").value;
         let travelers = document.getElementById("travelers").value;
         let travelClass = document.getElementById("class").value;
-
+        if(origin == destination){
+            openNotification("Origin and Destination cannot be same.");
+        }
+        else{
         console.log(`Searching flights from ${origin} to ${destination} on ${departureDate} for ${travelers} travelers in ${travelClass} class.`);
-        alert("Flight search functionality will be implemented soon!");
+        successNotification("Your Flight details will be updated soon!!");
+        }
     });
+    
+    
 });
+
+function successNotification(message){
+    document.getElementById("success-message").style.display = "block";
+    document.getElementById("display-success").innerText = message;
+}
+
+function closeSuccessNotification(){
+    document.getElementById("success-message").style.display = "none";
+    window.location.reload();
+}
+
+
+function openNotification(message){
+    document.getElementById("error-message").style.display = "block";
+    document.getElementById("display-error").innerText = message;
+}
+
+
+function closeNotification(){
+    document.getElementById("error-message").style.display = "none";
+    window.location.reload();
+}
