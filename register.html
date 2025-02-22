@@ -10,9 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="overlay" class="overlay"></div>
     <div id="alert-message">
         <p id="update-notification"></p>
         <button onclick="closeNotification()">Close</button>
+    </div>
+    <div id="error-message">
+        <p id="error-notification"></p>
+        <button onclick="finishNotification()">Close</button>
     </div>
     <div id="reset-message">
         <p id="reset-notification">Is it okay to reset?</p>
@@ -21,7 +26,6 @@
     </div>
     <div class="register-container">
         <h2>Passenger Registration</h2>
-        <div id="error-message"></div>
         <form id="register-form">
             <label for="firstName">First Name:</label>
             <input type="text" id="firstName" maxlength="50" required>

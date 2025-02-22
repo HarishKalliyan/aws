@@ -62,21 +62,24 @@ document.addEventListener("DOMContentLoaded", function() {
 function successNotification(message){
     document.getElementById("success-message").style.display = "block";
     document.getElementById("display-success").innerText = message;
+    document.getElementById("overlay").style.display = "block"; // Show overlay
 }
 
 function closeSuccessNotification(){
     document.getElementById("success-message").style.display = "none";
+    document.getElementById("overlay").style.display = "none"; // Hide overlay
     window.location.reload();
 }
 
 function openNotification(message){
     document.getElementById("error-message").style.display = "block";
     document.getElementById("display-error").innerText = message;
+    document.getElementById("overlay").style.display = "block"; // Show overlay
 }
 
 
 function closeNotification(event){
     document.getElementById("error-message").style.display = "none";
-    event.preventDefault();
+    document.getElementById("overlay").style.display = "none"; // Hide overlay
     window.location.reload();
 }

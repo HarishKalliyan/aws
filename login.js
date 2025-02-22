@@ -31,21 +31,26 @@ document.getElementById("login-form").addEventListener("submit", function(event)
 
 function successNotification(message){
     document.getElementById("success-message").style.display = "block";
+    document.getElementById("overlay").style.display = "block"; // Show overlay
     document.getElementById("display-success").innerText = message;
+    
 }
 
 function closeSuccessNotification(){
     document.getElementById("success-message").style.display = "none";
+    document.getElementById("overlay").style.display = "none"; // Hide overlay
     window.location.href = "home.html";
 }
 
 function openNotification(message){
     document.getElementById("error-message").style.display = "block";
+    document.getElementById("overlay").style.display = "block"; // Show overlay
     document.getElementById("display-error").innerText = message;
 }
 
 
 function closeNotification(){
     document.getElementById("error-message").style.display = "none";
+    document.getElementById("overlay").style.display = "none"; // Hide overlay
     window.location.href = "login.html";
 }

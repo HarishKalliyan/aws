@@ -7,26 +7,23 @@ document.getElementById("register-form").addEventListener("submit", function(eve
     let email = document.getElementById("email").value;
     let address = document.getElementById("address").value;
     let contact = document.getElementById("contact").value;
-    let errorDiv = document.getElementById("error-message");
+    // let errorDiv = document.getElementById("error-message");
 
     let dateCheck = new Date(dob);
     let minDate = new Date("1924-01-01");
 
     if (dateCheck <= minDate) {
-        errorDiv.textContent = "Choose a date greater than 1/1/1924.";
-        errorDiv.style.color = "red";
+        errorNotification("Choose a date greater than 1/1/1924.");
         return;
     }
 
     if (!contact.match(/^\d{10}$/)) {
-        errorDiv.textContent = "Enter a valid contact number.";
-        errorDiv.style.color = "red";
+        errorNotification("Enter a valid contact number.");
         return;
     }
 
     if (!email.includes("@")) {
-        errorDiv.textContent = "Enter a valid email.";
-        errorDiv.style.color = "red";
+        errorNotification("Enter a valid email.");
         return;
     }
 
@@ -54,18 +51,32 @@ document.getElementById("register-form").addEventListener("submit", function(eve
     
 });
 
+function errorNotification(message){
+    document.getElementById("error-message").style.display = "block";
+    document.getElementById("overlay").style.display = "block"; // Show overlay
+    document.getElementById("error-notification").innerText = message;
+}
+
+function finishNotification(){
+    document.getElementById("error-message").style.display = "none";
+    document.getElementById("overlay").style.display = "none"; // Hide overlay
+}
+
 function openNotification(message){
     document.getElementById("alert-message").style.display = "block";
+    document.getElementById("overlay").style.display = "block"; // Show overlay
     document.getElementById("update-notification").innerText = message;
 }
 
 function closeNotification(){
     document.getElementById("alert-message").style.display = "none";
+    document.getElementById("overlay").style.display = "none"; // Hide overlay
     window.location.href = "login.html";
 }
 
 function cancelReset(){
     document.getElementById("reset-message").style.display = "none";
+    document.getElementById("overlay").style.display = "none"; // Hide overlay
 }
 
 function applyReset(){
@@ -75,5 +86,6 @@ function applyReset(){
 document.getElementById("reset").addEventListener("click", function(event) {
     event.preventDefault();
     document.getElementById("reset-message").style.display = "block";
+    document.getElementById("overlay").style.display = "block"; // Show overlay
     
 });
