@@ -27,6 +27,19 @@ document.addEventListener("DOMContentLoaded", function() {
             openNotification("Please fill all the fields.");
             return;
         }
+        if (!document.getElementById("email").value.includes("@")) {
+            openNotification("Invalid email address.");
+            return;
+        }
+        if (document.getElementById("contact").value.length < 10 || document.getElementById("contact").value.length > 10) {
+            openNotification("Invalid contact number.");
+            return;
+        }
+        let minDate = new Date("1924-01-01");
+        if(document.getElementById("dob").valueAsDate < minDate){
+            openNotification("Invalid date of birth.");
+            return;
+        }
 
         let updatedUser = {
             passengerId: loggedInUser.passengerId,

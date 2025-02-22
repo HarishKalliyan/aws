@@ -102,11 +102,11 @@ a:hover{
     z-index: 20;
 }
 
-#alert-message p, #reset-message p {
+#alert-message p, #reset-message p, #error-message p {
     color: black;
 }
 
-#alert-message button, #reset-message button {
+#alert-message button, #reset-message button, #error-message button {
     background: teal;
     color: aliceblue;
     padding: 8px 16px;
@@ -117,7 +117,7 @@ a:hover{
     margin-top: 10px;
 }
 
-#alert-message button:hover, #reset-message button:hover {
+#alert-message button:hover, #reset-message button:hover, #error-message button:hover {
     background: rgb(130, 140, 140);
 }
 

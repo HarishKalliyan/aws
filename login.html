@@ -10,17 +10,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="overlay" class="overlay"></div>
+    <div id="error-message">
+        <p id="display-error"></p>
+        <button onclick="closeNotification()" id="close">Close</button>
+    </div>
+    <div id="success-message">
+        <p id="display-success"></p>
+        <button onclick="closeSuccessNotification()" id="close">Close</button>
+    </div>
     <div class="login-container">
         <h2>Login</h2>
-        <div id="overlay" class="overlay"></div>
-        <div id="error-message">
-            <p id="display-error"></p>
-            <button onclick="closeNotification()" id="close">Close</button>
-        </div>
-        <div id="success-message">
-            <p id="display-success"></p>
-            <button onclick="closeSuccessNotification()" id="close">Close</button>
-        </div>
+       
+        
         <form id="login-form">
             <label for="userId">User ID:</label>
             <input type="text" id="userId" maxlength="5" placeholder="Enter User ID" required>
