@@ -1,42 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Upcoming Trips</title>
-    <link rel="stylesheet" href="trips.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="trips.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <h2 id="welcomeMsg">Upcoming Trips!</h2>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="profile.html">My Profile</a></li>
-                <li><a href="upcoming.html">Upcoming Trips</a></li>
-                <li><a href="cancelled.html">Cancelled Trips</a></li>
-                <li><a href="completed.html">Completed Trips</a></li>
-                <li><a href="#" id="logout">Logout</a></li>
-            </ul>
-        </nav>
+      <h2 id="welcomeMsg">Upcoming Trips!</h2>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="upcoming.html">Upcoming Trips</a></li>
+          <li><a href="cancelled.html">Cancelled Trips</a></li>
+          <li><a href="completed.html">Completed Trips</a></li>
+          <li><a href="#" id="logout">Logout</a></li>
+        </ul>
+      </nav>
     </header>
 
     <h1>Airline Management System</h1>
 
     <h2>Upcoming Trips</h2>
     <table border="1" class="upcoming">
-        <tr>
-            <th>Flight Name</th><th>Origin</th><th>Destination</th><th>Travel Date</th><th>Price</th>
-        </tr>
-        <tr><td>Flight A</td><td>New York</td><td>London</td><td>2025-03-10</td><td>$500</td></tr>
-        <tr><td>Flight B</td><td>Los Angeles</td><td>Paris</td><td>2025-04-05</td><td>$600</td></tr>
-        <tr><td>Flight C</td><td>Chicago</td><td>Tokyo</td><td>2025-05-20</td><td>$700</td></tr>
+      <tr>
+        <th>Flight Name</th>
+        <th>Origin</th>
+        <th>Destination</th>
+        <th>Travel Date</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>Flight A</td>
+        <td>New York</td>
+        <td>London</td>
+        <td>2025-03-10</td>
+        <td>$500</td>
+      </tr>
+      <tr>
+        <td>Flight B</td>
+        <td>Los Angeles</td>
+        <td>Paris</td>
+        <td>2025-04-05</td>
+        <td>$600</td>
+      </tr>
+      <tr>
+        <td>Flight C</td>
+        <td>Chicago</td>
+        <td>Tokyo</td>
+        <td>2025-05-20</td>
+        <td>$700</td>
+      </tr>
     </table>
 
     <button id="backButton">Back</button>
-</body>
-<script src="trips.js"></script>
+  </body>
+  <script src="trips.js"></script>
 </html>

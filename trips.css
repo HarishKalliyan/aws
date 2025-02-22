@@ -1,38 +1,36 @@
 body {
-    font-family: "Inter", serif;
-    background-color: teal;
-    color: white;
-    text-align: center;
+  font-family: "Inter", serif;
+  background-color: teal;
+  color: white;
+  text-align: center;
 }
 
-
 header {
-    display: flex;
-    justify-content: space-between;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
 }
 
 header h2 {
-    margin: 0;
+  margin: 0;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
+  list-style: none;
+  padding: 0;
+  display: flex;
 }
 
 nav ul li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
-
 
 /* Page-Specific Background Colors */
 /* .upcoming {
@@ -49,47 +47,48 @@ nav ul li a {
 
 /* Table Styling */
 table {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background: white;
-    color: black;
-    border: none;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
 }
 
 td {
-    padding: 10px;
-    border: none;
-    text-align: center;
-    background: rgb(243, 243, 243);
+  padding: 10px;
+  border: none;
+  text-align: center;
+  background: rgb(243, 243, 243);
 }
 
-td ,th{
-    padding: 15px;
-    text-align: center;
-    border-bottom: 1.5px solid #ddd;
+td,
+th {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1.5px solid #ddd;
 }
 
-th{
-    color: white;
-    border: none;
-    font-weight: bolder;
-    font-size: larger;
+th {
+  color: white;
+  border: none;
+  font-weight: bolder;
+  font-size: larger;
 }
 /* Table Header Colors */
 .upcoming th {
-    background: #007bff;
+  background: #007bff;
 }
 
 .cancelled th {
-    background: rgb(222, 73, 73);
+  background: rgb(222, 73, 73);
 }
 
 .completed th {
-    background: rgba(82, 233, 82,0.904);
+  background: rgba(82, 233, 82, 0.904);
 }
 
 /* Back Button Styling */
@@ -130,21 +129,19 @@ th{
     background: darkgreen;
 } */
 
-
 #backButton {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: crimson;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: crimson;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 #backButton:hover {
-    background-color: darkred;
+  background-color: darkred;
 }
-
